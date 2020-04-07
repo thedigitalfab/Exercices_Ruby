@@ -24,10 +24,10 @@ puts "tu as demandé #{floor} etages"
 puts "Voici la pyramide:"
 i=0
 floor.times do
-    (floor - i).times do
-        print " "
+    (floor - i-1).times do
+        print "A"
     end
-    (i).times do
+    (i+1).times do
         print "#"
     end
     puts ""
