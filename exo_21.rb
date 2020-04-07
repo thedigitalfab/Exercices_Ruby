@@ -25,7 +25,7 @@ puts "Voici la pyramide:"
 i=0
 floor.times do
     (floor - i-1).times do
-        print "A"
+        print " "
     end
     (i+1).times do
         print "#"
