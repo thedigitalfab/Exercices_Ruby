@@ -21,11 +21,11 @@ end
 # Construit la pyramide:
 puts "tu as demandé #{floor} etages"
 puts "Voici la pyramide:"
-i=0
-floor.times do
+floor.times do |i|
+    my_floor = ""
     (i+1).times do
-        print "#"
+        my_floor += "#"
     end
-    puts ""
+    puts my_floor
     i +=1
 end
