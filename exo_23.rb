@@ -5,10 +5,14 @@
 #           > 5
 #           Voici la pyramide :
 #               #
-#              ##
-#             ###
-#            ####
-#           #####
+#              ###
+#             #####
+#            #######
+#           #########
+#            #######
+#             #####
+#              ###
+#               #
 #           Bien que légèrement différent dans l'énoncé, ce programme est bien plus dur que le exo_20.rb, donc c'est normal de devoir réfléchir à comment le faire 😎
 
 # Demande d'un nombre compris entre 1 et 25
@@ -20,26 +24,15 @@ while (floor <1 or floor > 25)
 end
 
 # Construit la pyramide:
-# puts "tu as demandé #{floor} etages"
-# puts "Voici la pyramide:"
-# floor.times do |i|
-#     my_floor = ""    
-#     (floor - i-1).times do
-#         my_floor += " "
-#     end
-#     (i+1).times do
-#         my_floor += "#"
-#     end
-#     puts my_floor
-#     i +=1
-# end
-
 puts "tu as demandé #{floor} etages"
 puts "Voici la pyramide:"
 floor.times do |i|
     my_floor = ""
-    my_floor += " " * (floor - i-1)
-    my_floor += "#" * (i+1)
+    if (i <= floor / 2)
+        my_floor += " " * ((floor - 1)/2 - i) + "#" * (2 * i + 1) #+ " " * ((floor - 1)/2 - i)
+    else
+        my_floor += " " * (i - (floor - 1)/2) + "#" * (2 * (floor - i) - 1) #+ " " * (i - (floor - 1)/2)
+    end
     puts my_floor
     i +=1
 end
